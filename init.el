@@ -2,23 +2,25 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 
-(require 'php-mode)
-(require 'auto-complete-config)
 (ido-mode t)
 
-(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(require 'php-mode)
+(require 'auto-complete-config)
 (require 'color-theme)
-(require 'smarty-mode)
 (require 'yaml-mode)
 
 (load '"color-theme-sunburst")
 (autoload 'scss-mode "scss-mode")
 (setq-default truncate-lines t)
 (setq make-backup-files nil)
+
+;; Associate files with extensions
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
 (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.mako$" . html-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.scss$" . scss-mode))
+
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 
 (global-auto-complete-mode t)
@@ -81,7 +83,6 @@
   "Set some buffer-local variables"
   (setq scss-compile-at-save nil)
 )
-
 
 (add-hook 'php-mode-hook 'pear/php-mode-init)
 (add-hook 'html-mode-hook 'html-mode-init)
