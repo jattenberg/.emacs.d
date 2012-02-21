@@ -26,6 +26,7 @@
 (global-auto-complete-mode t)
 (setq ac-auto-start 2)
 (setq ac-ignore-case nil)
+(global-set-key [f5] '(lambda () (interactive) (revert-buffer nil t nil)))
 
 (eval-after-load "color-theme"
   '(progn
