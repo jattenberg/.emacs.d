@@ -8,7 +8,7 @@
 (require 'auto-complete-config)
 (require 'color-theme)
 (require 'yaml-mode)
-
+(require 'flymake)
 (load '"color-theme-sunburst")
 (autoload 'scss-mode "scss-mode")
 (setq-default truncate-lines t)
@@ -86,6 +86,7 @@
 )
 
 (add-hook 'php-mode-hook 'pear/php-mode-init)
+(add-hook 'php-mode-hook (lambda () (flymake-mode 1)))
 (add-hook 'html-mode-hook 'html-mode-init)
 ;; The Javascript mode is js-mode.
 (add-hook 'js-mode-hook 'javascript-mode-init)
