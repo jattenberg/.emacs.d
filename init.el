@@ -1,6 +1,7 @@
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
+(add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
 
 (ido-mode t)
 
@@ -9,6 +10,8 @@
 (require 'color-theme)
 (require 'yaml-mode)
 (require 'flymake)
+(require 'yasnippet)
+
 (load '"color-theme-sunburst")
 (autoload 'scss-mode "scss-mode")
 (setq-default truncate-lines t)
@@ -24,6 +27,8 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 
 (global-auto-complete-mode t)
+(yas/global-mode t)
+
 (setq ac-auto-start 2)
 (setq ac-ignore-case nil)
 (global-set-key [f5] '(lambda () (interactive) (revert-buffer nil t nil)))
@@ -92,6 +97,7 @@
 (add-hook 'js-mode-hook 'javascript-mode-init)
 (add-hook 'c-mode-hook 'c-mode-init)
 (add-hook 'scss-mode-hook 'scss-mode-init)
+(add-hook 'python-mode-hook (lambda () (flymake-mode 1)))
 (add-hook 'js-mode-hook
           (lambda ()
             ;; Scan the file for nested code blocks
