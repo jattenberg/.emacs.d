@@ -10,7 +10,7 @@
 (require 'color-theme)
 (require 'yaml-mode)
 (require 'flymake)
-(require 'yasnippet)
+;; (require 'yasnippet)
 
 (load '"color-theme-sunburst")
 (autoload 'scss-mode "scss-mode")
@@ -27,7 +27,7 @@
 (add-to-list 'ac-dictionary-directories "~/.emacs.d/auto-complete/dict")
 
 (global-auto-complete-mode t)
-(yas/global-mode t)
+;; (yas/global-mode t)
 
 (setq ac-auto-start 2)
 (setq ac-ignore-case nil)
