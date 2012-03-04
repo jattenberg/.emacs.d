@@ -13,6 +13,7 @@
       (foreground-color . "#ddd")
       (mouse-color . "sienna1"))
      (default ((t (:background "#111" :foreground "#ddd"))))
+     (mode-line ((t (:background "#111" :foreground "#efefef"))))
      (blue ((t (:foreground "blue"))))
      (bold ((t (:bold t))))
      (bold-italic ((t (:bold t :slant italic))))
