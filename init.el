@@ -104,3 +104,7 @@
             (imenu-add-menubar-index)
             ;; Activate the folding mode
             (hs-minor-mode t)))
+
+; Don't display the menubar in text mode (it's useless).
+(if (not window-system)
+    (menu-bar-mode nil))
