@@ -2,7 +2,6 @@
 (add-to-list 'load-path "~/.emacs.d/color-theme-6.6.0")
 (add-to-list 'load-path "~/.emacs.d/auto-complete")
 (add-to-list 'load-path "~/.emacs.d/plugins/yasnippet")
-
 (ido-mode t)
 
 (require 'php-mode)
@@ -10,6 +9,7 @@
 (require 'color-theme)
 (require 'yaml-mode)
 (require 'flymake)
+(require 'apache-mode)
 ;; (require 'yasnippet)
 
 (load '"color-theme-sunburst")
@@ -67,7 +67,7 @@
 
 (defun javascript-mode-init()
   "Set some buffer-local variables."
-  (setq indent-tabs-mode t)
+  (setq indent-tabs-mode nil)
   (setq c-basic-offset 8)
   (setq tab-width 4)
   (smart-tab-mode nil)
