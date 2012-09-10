@@ -10,6 +10,7 @@
 (require 'yaml-mode)
 (require 'flymake)
 (require 'apache-mode)
+(require 'ace-jump-mode)
 ;; (require 'yasnippet)
 
 (load '"color-theme-sunburst")
